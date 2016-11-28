@@ -1,0 +1,12 @@
+[
+    {
+        "hospitalId": 1,
+        "hospitalName": "京颐体验医院",
+        "hospitalNameEn": "KingYee Experience Hospital"
+    },
+    {
+        "hospitalId": 2,
+        "hospitalName": "上海长征医院",
+        "hospitalNameEn": "Shanghai Changzheng Hospital"
+    }
+]
