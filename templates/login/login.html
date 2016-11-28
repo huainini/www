@@ -1,0 +1,23 @@
+<ion-pane class="loginView">
+    <ion-content>
+        <div class="loginLogo" ng-click="setStatus()" counter="0" time="0"  >
+            <div class="name" ng-bind="hospitalData['hospitalName']"></div>
+            <div class="nameEn"  ng-bind="hospitalData['hospitalNameEn']"></div>
+        </div>
+        <form ng-submit="doLogin()">
+            <div class="list list-inset">
+                <label class="item item-input">
+                    <i class="icon ion-person placeholder-icon"></i>
+                    <input type="text" placeholder="用户名" ng-model="user['name']">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-locked placeholder-icon"></i>
+                    <input type="password" placeholder="密码" ng-model="user['password']">
+                </label>
+            </div>
+            <button class="button button-block loginBtn mobileAppBaseBtn" type="submit">
+                登录
+            </button>
+        </form>
+    </ion-content>
+</ion-pane>

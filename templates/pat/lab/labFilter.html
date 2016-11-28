@@ -1,0 +1,26 @@
+<ion-sidebox-view class="ordersearchView"  title="筛选" cancel-fn="cancelFn()" ok-fn="okFn()">
+
+    <!--<ion-header-bar  align-title="center" class="stable ">-->
+        <!--<div class="title">-->
+            <!--<div class="leftButtonStyle"  ng-click="executeSearch(0)">取消</div>-->
+            <!--<div class="centerDivStyle">筛选</div>-->
+            <!--<div class=" rightButtonStyle" ng-click="executeSearch(1)">确定</div>-->
+        <!--</div>-->
+    <!--</ion-header-bar>-->
+    <ion-content overflow-scroll="true" style="overflow: hidden"  ng-controller="labFilterCtrl">
+        <div class="itemTitle">状态</div>
+            <div class="filterItem" ng-click="queryLabStatusText(0)"
+                 ng-class="{true:'select',false:'notselect'}[flag[0]]">收到申请
+            </div>
+            <div class="filterItem" ng-click="queryLabStatusText(1)"
+                 ng-class="{true:'select',false:'notselect'}[flag[1]]">已执行
+            </div>
+            <div class="filterItem" ng-click="queryLabStatusText(2)"
+                 ng-class="{true:'select',false:'notselect'}[flag[2]]">初步报告
+            </div>
+            <div class="filterItem" ng-click="queryLabStatusText(3)"
+                 ng-class="{true:'select',false:'notselect'}[flag[3]]">确认报告
+            </div>
+
+    </ion-content>
+</ion-sidebox-view>

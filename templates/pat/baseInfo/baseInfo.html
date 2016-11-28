@@ -1,0 +1,124 @@
+<ion-view class="baseinfoView">
+<!--<ion-view view-title={{titleView}} class="baseinfoView">-->
+
+    <ion-content >
+        <div class="baseInfoDiv">
+            <!--<div class="baseInfos">-->
+            <div class="baseInfo-name">
+                <div class="icon patImg" ng-class="{'男':'icon-man red','女':'icon-woman blue'}[baseInfo['sex']]"></div>
+                <div class=" patName" >{{baseInfo['name']}}</div>
+            </div>
+            <div class="item1">
+                    <div class="itemValue1">{{baseInfo['sex']}}</div>
+                    <div class="itemValue1">{{baseInfo['patAge']}}</div>
+                    <div class="itemLastValue">{{baseInfo['nation']}}</div>
+                </div>
+            <div class="item2">
+                    <div class="itemValue1">{{baseInfo['chargeType']}}</div>
+                   <div class="itemArrearsValue">余额:&nbsp;{{baseInfo['arrears']}}</div>
+                </div>
+        </div>
+        <div class="card  otherInfos">
+            <div class="itemTitle">
+                <div class="itemLabel">住院号</div>
+                <div class="itemValue">{{baseInfo['inpNo']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">身份</div>
+                <div class="itemValue">{{baseInfo['identity']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">身份证</div>
+                <div class="itemValue">{{baseInfo['idNo']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">出生地</div>
+                <div class="itemValue">{{baseInfo['areaName']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">出生日期</div>
+                <div class="itemValue">{{ baseInfo['dateOfBirth']|date:'yyyy-MM-dd'}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">联系人</div>
+                <div class="itemValue">{{baseInfo['nextOfKin']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">与病人关系</div>
+                <div class="itemValue">{{baseInfo['relationShioName']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">联系电话</div>
+                <div class="itemValue">{{baseInfo['nextOfKinPhone']}}</div>
+            </div>
+        </div>
+        <!--<h3>住院情况</h3>-->
+        <div class="cardTitleDiv">住院情况</div>
+        <div class="card otherInfos">
+            <div class="itemTitle">
+                <div class="itemLabel">入院科室</div>
+                <div class="itemValue">{{baseInfo['toDeptName']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">门诊诊断</div>
+                <div class="itemValue">{{baseInfo['diagnosis']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">入院病情</div>
+                <div class="itemValue">{{baseInfo['patientStatusName']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">过敏药物</div>
+                <div class="itemValue">{{baseInfo['alergyDrugs']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">医生</div>
+                <div class="itemValue">{{baseInfo['doctorInCharge']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">血型</div>
+                <div class="itemValue">{{baseInfo['bloodType']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">手术时间</div>
+                <div class="itemValue">{{baseInfo['operatingDate']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">出院科室</div>
+                <div class="itemValue">{{baseInfo['fromDeptName']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">入院日期</div>
+                <div class="itemValue">{{baseInfo['admissionDateTime']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">出院日期</div>
+                <div class="itemValue">{{baseInfo['dischargeDateTime']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">入科日期</div>
+                <div class="itemValue">{{baseInfo['admWardDateTime']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">住院次数</div>
+                <div class="itemValue">{{baseInfo['visitId']}}</div>
+            </div>
+        </div>
+        <!--<h3>费用记录</h3>-->
+        <div class="cardTitleDiv">费用记录</div>
+        <div class="card otherInfos">
+            <div class="itemTitle">
+                <div class="itemLabel">预交金</div>
+                <div class="itemValue">{{baseInfo['prepayments']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">总费用</div>
+                <div class="itemValue">{{baseInfo['totalCosts']}}</div>
+            </div>
+            <div class="itemTitle">
+                <div class="itemLabel">余额</div>
+                <div class="itemValue">{{baseInfo['arrears']}}</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view >

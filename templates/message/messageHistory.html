@@ -1,0 +1,27 @@
+<ion-view class="messageHistoryView">
+    <ion-header-bar align-title="center" class="stable mobileAppBaseBtn bar bar-header disable-user-behavior">
+        <div class="buttons">
+            <button class="button icon-left ion-chevron-left button-clear mobileAppBaseBtn"
+                ng-click="backToMessage()">
+            </button>
+        </div>
+        <div class="search-input">
+            <label class="item item-input">
+                <span class="icon icon-search placeholder-icon"></span>
+                <input type="text" placeholder="请输入关键字" ng-model='searchText'>
+            </label>
+        </div>
+        <div class="buttons searchBtn">
+            <button class="button button-clear mobileAppBaseBtn"
+                    ng-click="toSearch()">搜索
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="messageView">
+        <ion-refresher pulling-icon="ion-ios-arrow-down" spinner="dots" on-refresh="refresh(false)"></ion-refresher>
+        <ion-spinner ng-if="!dataLoaded" icon="dots" class="load-spinner"></ion-spinner>
+        <message-card ng-repeat="message in messages track by $index" ></message-card>
+		<ion-infinite-scroll ng-if="isMore" on-infinite="loadMore()" distance="1%" spinner="dots">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

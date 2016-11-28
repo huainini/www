@@ -1,0 +1,10 @@
+<ion-view view-title={{titleView}} class="vitalSignsMainView">
+    <ion-content class="vitalSignsNavView" id="viewCardId">
+        <div vital-signs-dom vital-signs-card  icon-cls="icon-xindian" title-data="heartBeatData" id="heartBeatBlock" next-node="spO2Block" upper-cls="blockCardClass" chart-config="heartBeatChartConfig" edit-or-completed="heartBeatId" do-edit='doEdit(type)'
+             do-completed='doCompleted(type,itemCode,itemName,itemUnit)' variable-change="changeValue.heartThreshold"></div>
+        <div vital-signs-dom vital-signs-card icon-cls="icon-xueyang" title-data="spO2data" id="spO2Block" next-node="bloodPressBlock" upper-cls="blockCardClass" chart-config="spO2ChartConfig"edit-or-completed="spO2Id"
+             do-edit='doEdit(type)' do-completed='doCompleted(type,itemCode,itemName,itemUnit)' variable-change="changeValue.spO2Threshold"></div>
+        <div vital-signs-dom vital-signs-div blood-press-config="bloodPressConfig" id="bloodPressBlock" upper-cls="blockCardClass bloodPressCardClass" blood-press-id="bloodPressId"
+             do-edit='doEdit(type)' do-completed='doCompleted(type,itemCode,itemName,itemUnit)' blood-change="bloodChange"></div></div>
+    </ion-content>
+</ion-view>

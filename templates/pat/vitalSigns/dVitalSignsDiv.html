@@ -1,0 +1,46 @@
+<div>
+    <div class="blockCardClass bloodPressCardClass">
+    <div class="littleDivCls">
+        <div class="topDivCls row">
+            <div class="col-75">
+            <div class="textCls col-33">血压</div>
+            <div class="textCls unitCls col-66">({{bloodChange.topValue}}/{{bloodChange.minValue}})</div>
+            </div>
+            <div class="col-25">
+            <div class="icon-edit col-15" ng-show="bloodPressId" ng-click="edit(type)"></div>
+            <div class="completeCls col-15" ng-show="!bloodPressId" ng-click="completed(type,titleData.itemCode,titleData.itemName,titleData.itemUnit)">完成</div>
+            </div>
+        </div>
+        <div class="bottomDivCls">
+            <div class="row col-66" >
+            <div class="valueCls col-50">{{bloodPressConfig.maxDataValue}}/{{bloodPressConfig.minDataValue}}</div>
+            <div class="unitAnotherCls col-33">{{bloodPressConfig.itemUnit}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="changeValueCls" id="changeRangeId" ng-if="!bloodPressId">
+        <div class="modifyCardClass">
+            <div class="limitDivCls">
+                <div class="nameDivCls">
+                    <div class="textCls">{{bloodChange.topValue}}(b/min)</div>
+                </div>
+                <div class="valueDivCls">
+                    <div class="item range range-assertive">
+                        <input id="myRange" type="range" min="0" max="160" name="maxValue" ng-model="bloodChange.topValue">
+                    </div>
+                </div>
+            </div>
+            <div class="limitDivCls">
+                <div class="nameDivCls">
+                    <div class="textCls">{{bloodChange.minValue}}(b/min)</div>
+                </div>
+                <div class="valueDivCls">
+                    <div class="item range range-balanced">
+                        <input type="range" min="0" max="160" name="minValue" ng-model="bloodChange.minValue">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

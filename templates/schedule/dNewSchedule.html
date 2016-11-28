@@ -1,0 +1,38 @@
+<div class="list dNewSchedule">
+    <div class="item item-input">
+        <input type="text" placeholder="标题" ng-model="event.title">
+    </div>
+    <div class="item item-input">
+        <input type="text" placeholder="地点" ng-model="event.place">
+    </div>
+    <ion-toggle ng-model="event.allDay" toggle-class="toggle-calm">全天</ion-toggle>
+		<div class="item item-input">
+		    <div class="input-label">开始</div>
+			<div style="width:65%">
+			<ionic-datepicker style="width:50%;float:left;height:1.5em;" idate="event.startdate" >{{event.startdate| date:'yyyy-MM-dd'}}
+			</ionic-datepicker>
+			<ionic-timepicker style="width:50%;float:left;height:1.5em;" itime="event.starttime" format="24" step="1">{{event.starttime| date:'HH:mm'}}
+			</ionic-timepicker>
+			</div>
+		</div>
+	<div class="item item-input">
+		    <div class="input-label">结束</div>
+			<div style="width:65%">
+			<ionic-datepicker style="width:50%;float:left;height:1.5em;" idate="event.enddate" >{{event.enddate| date:'yyyy-MM-dd'}}
+			</ionic-datepicker>
+			<ionic-timepicker style="width:50%;float:left;height:1.5em;" itime="event.endtime" format="24" step="1">{{event.endtime| date:'HH:mm'}}
+			</ionic-timepicker>
+			</div>
+		</div>
+    <div class="item item-input">
+        <div class="input-label">重复</div>
+        <div class="selectField" ng-click="repeatClick()">{{event.repeatRate}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">提醒</div>
+        <div class="selectField" ng-click="remindClick()">{{event.remind}}</div>
+    </div>
+    <div class="item item-input introCls">
+        <textarea rows="8" ng-model="event.content" placeholder="说明" class="breakCls"> </textarea>
+    </div>
+</div>

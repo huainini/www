@@ -1,0 +1,48 @@
+<ion-view class="patDetailCls">
+    <header-bar></header-bar>
+  <!--  <ion-nav-bar class="stable mobileAppBaseBtn bar bar-heade">
+        <ion-nav-button>
+            <ion-nav-back-button class="button icon-left ion-chevron-left button-clear mobileAppBaseBtn">
+            </ion-nav-back-button>
+        </ion-nav-button>
+    </ion-nav-bar>-->
+    <tab-slide-box>
+        <div class="tsb-icons">
+            <div class="tsb-ic-wrp tabs tabs-top">
+                <ion-scroll direction="x" class="tsb-hscroll">
+                    <!--  <a ng-click="selectTabWithIndex(0)" ui-sref="patInfoTabs.baseInfo">病人信息</a>-->
+                    <a ng-click="selectTabWithIndex(0)">基本信息</a>
+                    <a ng-click="selectTabWithIndex(1)">医嘱</a>
+                    <a ng-click="selectTabWithIndex(2)">检查</a>
+                    <a ng-click="selectTabWithIndex(3)">检验</a>
+                    <a ng-click="selectTabWithIndex(4)">报警记录</a>
+                    <a ng-click="selectTabWithIndex(5)">生命体征</a>
+                   <!-- <a ui-sref="patInfoTabs.vitalSigns">生命体征</a>-->
+                </ion-scroll>
+            </div>
+        </div>
+        <ion-slide-box show-pager="false" locking="true" on-slide-changed="slideHasChanged($index)">
+            <ion-slide>
+                <ion-nav-view name="baseInfo"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="order"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="exam"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="lab"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="alarmHistory"></ion-nav-view>
+            </ion-slide>
+            <ion-slide>
+                <ion-nav-view name="vitalSigns"></ion-nav-view>
+            </ion-slide>
+
+        </ion-slide-box>
+    </tab-slide-box>
+</ion-view>
+
+

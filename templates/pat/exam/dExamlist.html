@@ -1,0 +1,16 @@
+<div class="card cardStyle">
+    <div class="TitleStyle row"  ng-click="queryExamReport(examItem)">
+        <div class="icon-check col col-10" ></div>
+        <div class="examClassDiv col col-33">{{examItem['examClass']}}</div>
+        <div class="examStatusDiv col col-40">{{examItem['resultStatus']}}</div>
+        <div class="icon-arrow col" ng-show="hideOrShow(examItem['resultStatus'])"></div>
+    </div>
+    <div class="labelTitle row">
+        <div class=" col col-33">{{examItem['examSubClass']}}</div>
+        <div class="textCenter  col  col-50" >{{examItem['examNo']}}</div>
+      </div>
+    <div class="labelTitle row">
+        <div class=" col col-33">{{examItem['reqPhysician']}}</div>
+        <div class="textCenter col  col-57">{{examItem['examDateTime']}}</div>
+    </div>
+</div>

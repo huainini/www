@@ -1,0 +1,46 @@
+<ion-view class="newFormulaView" xmlns="http://www.w3.org/1999/html">
+    <header-bar></header-bar>
+    <ion-content class="newFormula" scroll="false">
+        <div class="formulaContext">
+            <textarea rows="3" class="textAreaStyle" readonly="true"
+                      placeHolder="请在下方键盘编辑公式">{{newFormulaText}}</textarea>
+
+            <div class="varStyle">
+                <div class="varDiv" ng-repeat="item in variablesList" ng-click="addValue(item.paraName)">
+                    {{item.paraName}}{{item.paraUnit}}
+                </div>
+                <!--<label class="labelStyle" ng-repeat="item in variablesList" ng-click="addValue(item.paraName)">{{item.paraName}}</label>-->
+            </div>
+        </div>
+        <div class="keyBoardClass">
+            <div class="buttonLine">
+                <button class="button-icon icon-plus buttonClass buttonOperationClass" ng-click="addValue('+')"></button>
+                <button class="buttonClass" ng-click="addValue('7')">7</button>
+                <button class="buttonClass" ng-click="addValue('8')">8</button>
+                <button class="buttonClass" ng-click="addValue('9')">9</button>
+                <button class="buttonClass buttonBackCls" ng-click="clearOne()">退格</button>
+            </div>
+            <div class="buttonLine">
+                <button class="button-icon icon-minus buttonClass buttonOperationClass" ng-click="addValue('-')"></button>
+                <button class="buttonClass" ng-click="addValue('4')">4</button>
+                <button class="buttonClass" ng-click="addValue('5')">5</button>
+                <button class="buttonClass" ng-click="addValue('6')">6</button>
+                <button class="buttonClass buttonClcCls" ng-click="clear()">清空</button>
+            </div>
+            <div class="buttonLine">
+                <button class="button-icon icon-multiplication buttonClass buttonOperationClass" ng-click="addValue('*')"></button>
+                <button class="buttonClass" ng-click="addValue('1')">1</button>
+                <button class="buttonClass" ng-click="addValue('2')">2</button>
+                <button class="buttonClass" ng-click="addValue('3')">3</button>
+                <button class="button-icon icon-power buttonClass buttonOperationClass" ng-click="addValue('^')"></button>
+            </div>
+            <div class="buttonLine">
+                <button class="button-icon icon-division buttonClass buttonOperationClass" ng-click="addValue('/')"></button>
+                <button class="buttonClass" ng-click="addValue('0')">0</button>
+                <button class="buttonClass" ng-click="addValue('.')">.</button>
+                <button class="buttonClass" ng-click="addValue('arg')">变量</button>
+                <button class="buttonClass buttonBackCls" ng-click="addValue('ln')">ln</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

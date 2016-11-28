@@ -1,0 +1,21 @@
+<ion-view class="commonFormulasView">
+    <ion-content>
+        <ion-refresher pulling-icon="ion-ios-arrow-down" spinner="dots" on-refresh="refresh()"></ion-refresher>
+        <ion-spinner ng-if="!dataLoaded" icon="dots" class="load-spinner"></ion-spinner>
+        <div class="cardStyle">
+            <ion-list>
+                <ion-item class="itemCls" ng-repeat="item in formulaList"
+                          ng-value="item.formulaName"
+                          ng-model="item.formulaName"
+                          ng-click="toDetail(item.formulaId,item.formulaName)">
+                    {{ item.formulaName}}
+                    <ion-option-button class="button-assertive"
+                                       ng-click="doRemove(item)">
+                        移除
+                    </ion-option-button>
+                    <span class="button button-icon icon-arrow buttonCls"></span>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

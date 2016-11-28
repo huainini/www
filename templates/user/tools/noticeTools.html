@@ -1,0 +1,54 @@
+<ion-view>
+    <header-bar></header-bar>
+    <ion-content >
+
+        <li class="item item-toggle">
+            手术通知
+            <label class="toggle toggle-calm " ng-click="acceptNoticeChange('acceptOperationNotice')">
+                <input type="checkbox" ng-checked="isCheck(ToolsResult['acceptOperationNotice'])">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </li>
+        <li class="item item-toggle">
+            危急值通知
+            <label class="toggle toggle-calm " ng-click="acceptNoticeChange('acceptCriticalValueNotice')">
+                <input type="checkbox" ng-checked="isCheck(ToolsResult['acceptCriticalValueNotice'])">
+
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </li>
+        <li class="item item-toggle">
+            会诊通知
+            <label class="toggle toggle-calm " ng-click="acceptNoticeChange('acceptConsultationNotice')">
+                <input type="checkbox" ng-checked="isCheck(ToolsResult['acceptConsultationNotice'])">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </li>
+        <li  class="item item-toggle">
+            用药审核通知
+            <label class="toggle toggle-calm " ng-click="acceptNoticeChange('acceptDrugReviewNotice')">
+                <input type="checkbox" ng-checked="isCheck(ToolsResult['acceptDrugReviewNotice'])">
+
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </li>
+        <li class="item item-toggle">
+            手术安排通知
+            <label class="toggle toggle-calm " ng-click="acceptNoticeChange('acceptOperationArrangement')">
+                <input type="checkbox" ng-checked="isCheck(ToolsResult['acceptOperationArrangement'])">
+
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </li>
+    </ion-content>
+</ion-view>

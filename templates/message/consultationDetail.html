@@ -1,0 +1,14 @@
+<ion-pane>
+    <header-bar></header-bar>
+    <ion-content class="detailView">
+        <consultation-info></consultation-info>
+        <div class="detailButtons" ng-if="checked">
+            <button class="button button-assertive detailButton" ng-click="checkRefuse()">
+                拒绝
+            </button>
+            <button class="button button-balanced detailButton" ng-click="checkAgree()">
+                同意
+            </button>
+        </div>
+    </ion-content>
+</ion-pane>

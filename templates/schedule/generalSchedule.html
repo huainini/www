@@ -1,0 +1,12 @@
+<ion-pane class="generalScheduleView">
+    <header-bar></header-bar>
+    <ion-content ng-model="event">
+        <schedule-base-info></schedule-base-info>
+        <schedule-intro></schedule-intro>
+    </ion-content >
+    <ion-footer-bar class="bar-assertive whiteBackground">
+        <div class="button-bar">
+            <button class="button" ng-click="deleteSchedule()">删除</button>
+        </div>
+    </ion-footer-bar>
+</ion-pane>

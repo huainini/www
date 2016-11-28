@@ -1,0 +1,25 @@
+<ion-view class="commonFormulaView">
+    <header-bar></header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item item-divider item-choice item-selected">
+                已选公式
+            </div>
+            <ion-item ng-repeat="item in selectedList"
+                      ng-value="item.formulaName"
+                      ng-click="deleteFromSelectedList($index)">
+                {{ item.formulaName}}
+            </ion-item>
+        </div>
+        <div class="list">
+            <div class="item item-divider item-choice item-select">
+                通用公式
+            </div>
+            <ion-item ng-repeat="item in formulaList"
+                      ng-value="item.checked"
+                      ng-click="addToSelectedList($index)">
+                {{ item.formulaName}}
+            </ion-item>
+        </div>
+    </ion-content>
+</ion-view>

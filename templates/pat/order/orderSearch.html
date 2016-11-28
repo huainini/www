@@ -1,0 +1,49 @@
+    <ion-sidebox-view class="ordersearchView"  title="筛选" cancel-fn="cancelFn()" ok-fn="okFn()">
+        <div style="height: 100%;" ng-controller="OrderSearchCtrl">
+        <div class="itemTitle">长/临</div>
+            <div class="filterItem " ng-click="SearchLongClick(0)"
+                 ng-class="{true:'select',false:'notselect'}[longTempMark[0]]">长&nbsp;期
+            </div>
+            <div class="filterItem " ng-click="SearchLongClick(1)"
+                 ng-class="{true:'select',false:'notselect'}[longTempMark[1]]">临&nbsp;时
+            </div>
+          <div class="itemTitle">类别</div>
+            <div class="filterItem" ng-click="SearchOrderClassClick(0);"
+                 ng-class="{true:'select',false:'notselect'}[class[0]]">药&nbsp;疗
+            </div>
+            <div class="filterItem" ng-click="SearchOrderClassClick(1);"
+                 ng-class="{true:'select',false:'notselect'}[class[1]]">处&nbsp;置
+            </div>
+            <div class="filterItem" ng-click="SearchOrderClassClick(2);"
+                 ng-class="{true:'select',false:'notselect'}[class[2]]">膳&nbsp;食
+            </div>
+            <div class="filterItem" ng-click="SearchOrderClassClick(3);"
+                 ng-class="{true:'select',false:'notselect'}[class[3]]">护&nbsp;理
+            </div>
+            <div class="filterItem" ng-click="SearchOrderClassClick(4);"
+                 ng-class="{true:'select',false:'notselect'}[class[4]]">手&nbsp;术
+            </div>
+            <div class="filterItem" ng-click="SearchOrderClassClick(5);"
+                 ng-class="{true:'select',false:'notselect'}[class[5]]">检&nbsp;查
+            </div>
+            <div class="filterItem" ng-click="SearchOrderClassClick(6);"
+                 ng-class="{true:'select',false:'notselect'}[class[6]]">化&nbsp;验
+            </div>
+        <div class="itemTitle">状态</div>
+            <div class="filterItem" ng-click="SearchOrderStatusClick(0);"
+                 ng-class="{true:'select',false:'notselect'}[status[0]]">待提交
+            </div>
+            <div class="filterItem" ng-click="SearchOrderStatusClick(1);"
+                 ng-class="{true:'select',false:'notselect'}[status[1]]">新&nbsp;开
+            </div>
+            <div class="filterItem" ng-click="SearchOrderStatusClick(2);"
+                 ng-class="{true:'select',false:'notselect'}[status[2]]">执&nbsp;行
+            </div>
+            <div class="filterItem" ng-click="SearchOrderStatusClick(3);"
+                 ng-class="{true:'select',false:'notselect'}[status[3]]">停&nbsp;止
+            </div>
+            <div class="filterItem" ng-click="SearchOrderStatusClick(4);"
+                 ng-class="{true:'select',false:'notselect'}[status[4]]">作&nbsp;废
+            </div>
+        </div>
+    </ion-sidebox-view>

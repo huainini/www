@@ -1,0 +1,10 @@
+<ion-pane class="formulasView">
+    <header-bar></header-bar>
+    <ion-content scroll="false">
+        <div class="subMenu">
+            <div class="commonFormulas {{classColor.commonFormulaColor}} rightDiv" ng-click="commonFormulasClick()">通用公式</div>
+            <div class="privateFormulas {{classColor.privateFormulaColor}} leftDiv" ng-click="privateFormulasClick()">我的公式</div>
+        </div>
+        <ion-nav-view name="formulaListContent"></ion-nav-view>
+    </ion-content>
+</ion-pane>

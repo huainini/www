@@ -1,0 +1,31 @@
+<div>
+    <div class="deliver-time">
+        {{message.deliverTime | deliverTimeFilter}}
+    </div>
+    <div class="card consultationRefuse-card" on-hold="deleteMessage($index)">
+        <div class="row message-header">
+            <div class="icon-ref icon-class">
+            </div>
+            <div class="message-title">
+                会诊状态更新
+            </div>
+        </div>
+        <div class="message-content">
+            <div class="row">
+                <div class="refuse-class">主治医生不同意</div>
+            </div>
+            <div class="row">
+                <div class="reason-class">理由：病人不需要会诊</div>
+            </div>
+        </div>
+        <div class="message-content noborder-content">
+            <div class="row">
+                <div>右侧腹股沟斜疝</div>
+            </div>
+            <div class="row">
+                <div class="bedno-class">1床</div>
+                <div class="name-class">谷增光</div>
+            </div>
+        </div>
+    </div>
+</div>

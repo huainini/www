@@ -1,0 +1,34 @@
+<div>
+    <div class="deliver-time">
+        {{message.deliverTime | deliverTimeFilter}}
+    </div>
+    <div class="card drugreviewNotice-card" on-hold="deleteMessage($index)">
+        <div class="row message-header">
+            <div class="icon-med icon-class">
+            </div>
+            <div class="message-title">
+                药物审核通知
+            </div>
+        </div>
+        <div class="message-content">
+            <div class="row">
+                <div class="check-status">拒绝</div>
+            </div>
+            <div class="row">
+                <div class="refuse-reason">拒绝原因：药品剂量超标</div>
+            </div>
+            <div class="row">
+                <div class="bedno-class">1床</div>
+                <div class="name-class">谷增光</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="unread-class">
+                <div ng-if="message.readTimes==0">新</div>
+            </div>
+            <div class="row message-footer" ng-click="toDrugReviewDetail($index)">
+                <div class="col">查看详情</div>
+            </div>
+        </div>
+    </div>
+</div>

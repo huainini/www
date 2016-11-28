@@ -1,0 +1,17 @@
+
+<ion-view view-title={{titleView}}  class="examInfos orderView">
+
+    <ion-content>
+        <!--
+         刷新操作需要添加ion-refresher元素(必须位于ion-content元素下第一行), 加载动画需要添加icon-spinner元素
+         class load-spinner是我（汪伟滨）写的一个css，用于将加载动画居中，写于_mobileApp.scss中
+         如果觉得加载动画和下拉箭头不好看的，请参考
+         http://ionicframework.com/docs/api/directive/ionSpinner/  加载动画
+         http://ionicons.com/   箭头
+         选择较为好看的图标，讨论后统一更换
+        -->
+        <ion-refresher pulling-icon="ion-ios-arrow-down" spinner="dots" on-refresh="refresh(false)"></ion-refresher>
+        <ion-spinner ng-if="!dataLoaded" icon="dots" class="load-spinner"></ion-spinner>
+        <lab-list ng-repeat="labItem in LabList"></lab-list>
+    </ion-content>
+</ion-view>

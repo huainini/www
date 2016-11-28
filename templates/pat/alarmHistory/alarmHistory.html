@@ -1,0 +1,16 @@
+<ion-view view-title={{titleView}} class="alarmHistoryView">
+    <ion-content class="contentCls">
+
+        <div ng-repeat="alarmHistroyItem in alarmHistoryList" class="card cardStyle  ">
+           <div class="title row">
+            <div class="col col-10" ng-class="{'心率':'icon-xindian','血氧饱和度':'icon-xueyang','血压':'icon-xueya'}[alarmHistroyItem['itemName']]"></div>
+            <div class="name col col-33 ">{{alarmHistroyItem['itemName']}}</div>
+            <div class="time col col-50">{{alarmHistroyItem['itemTime']| date:'yyyy-MM-dd HH:mm'}}</div>
+        </div>
+            <div class="value row">
+                <div class="itemValue col  col-33 ">{{alarmHistroyItem['itemValue']}}{{alarmHistroyItem['itemUnit']}}{{alarmHistroyItem['flag']}}</div>
+                <div class="range col col-50">{{alarmHistroyItem['range']}}&nbsp;{{alarmHistroyItem['itemUnit']}}</div>
+            </div>
+        </div>
+    </ion-content >
+</ion-view>

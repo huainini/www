@@ -1,0 +1,14 @@
+<div>
+    <operation-notice ng-if="message.type==1"></operation-notice>
+    <lab-report ng-if="message.type==5"></lab-report>
+    <exam-report ng-if="message.type==4"></exam-report>
+
+    <critical-card ng-if="message.type==6"></critical-card>
+    <drug-review ng-if="message.type==2"></drug-review>
+    <consultation-check ng-if="message.type==7"></consultation-check>
+    <consultation-review ng-if="message.type==8"></consultation-review>
+    <consultation-agree ng-if="message.type==9"></consultation-agree>
+    <consultation-refuse ng-if="message.type==10"></consultation-refuse>
+    <consultation-notice ng-if="message.type==11"></consultation-notice>
+    <drug-review-notice ng-if="message.type==12"></drug-review-notice>
+</div>

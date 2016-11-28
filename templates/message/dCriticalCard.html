@@ -1,0 +1,27 @@
+<div>
+    <div class="deliver-time">
+        {{message.deliverTime | deliverTimeFilter}}
+    </div>
+    <div class="card critical-card" on-hold="deleteMessage($index)">
+        <div class="row message-header">
+            <div class="icon-weiji icon-class">
+            </div>
+            <div class="message-title">
+                危急值
+            </div>
+        </div>
+        <div class="message-content">
+            <div class="row">
+                <div class="critical-name">{{message.itemName}}</div>
+                <div class="critical-name">{{message.itemValue}}{{message.itemUnit}}</div>
+				<div class="critical-value">{{message.flag=="-"?"正常":message.flag}}({{message.range}})</div>
+            </div>
+            <div class="row">
+                <div class="bedno-class">{{message.patBedNo}}床</div>
+                <div class="name-class">{{message.patientName}}</div>
+                <div class="time-class">{{message.itemTime | date:'yyyy-MM-dd HH:mm'}}</div>
+            </div>
+        
+        </div>
+    </div>
+</div>

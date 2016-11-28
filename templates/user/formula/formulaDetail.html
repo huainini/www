@@ -1,0 +1,50 @@
+<ion-view class="formulaDetailView" xmlns="http://www.w3.org/1999/html">
+    <header-bar></header-bar>
+    <ion-content>
+        <div>
+            <div class="item item-input">
+                <div class="input-label">公式内容</div>
+                <div class="autoHeight">{{formula.formulaExpression}}</div>
+            </div>
+
+            <div class="item item-input" ng-repeat="item in showList track by $index">
+                <div class="input-label autoHeight">{{item.name}}<span ng-show="item.unit">({{item.unit}})</span>
+                </div>
+                <input type="number" min="0" max="9999" placeholder="请输入变量值" ng-model="item.attr"/>
+            </div>
+
+            <div class="item item-input" ng-show="showPatName">
+                <div class="input-label">病人姓名</div>
+                <div class="autoHeight patient-name">{{patientName}}</div>
+            </div>
+
+            <div class="item item-input result-input">
+                <div class="result-label">结果</div>
+                <div class="autoHeight result-show">{{result.toFixed(4)}}</div>
+                <div class="autoHeight result-unit" ng-show="result!=null">{{formula.resultUnit}}</div>
+            </div>
+
+            <div class="buttonAll">
+                <button class="button button-positive buttonStyle clcBut" ng-click="doClear()">清空</button>
+                <button class="button button-positive buttonStyle ccaBut" ng-click="doCalculate()">计算</button>
+            </div>
+        </div>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label state-input ">参数说明</span>
+
+                <div class="item item-text-wrap itemStyle">{{formula.paraState}}</div>
+            </label>
+            <label class="item item-input  item-stacked-label">
+                <span class="input-label state-input ">使用条件</span>
+
+                <div class="item item-text-wrap itemStyle">{{formula.condition}}</div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label state-input ">注意事项</span>
+
+                <div class="item item-text-wrap itemStyle">{{formula.tips}}</div>
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

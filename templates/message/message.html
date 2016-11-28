@@ -1,0 +1,16 @@
+<ion-view view-title="消息">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon mobileAppBaseBtn" menu-toggle="left">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button-clear icon-history mobileAppBaseBtn message-history"
+                ng-click="messageHistory()">
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="messageView">
+        <ion-refresher pulling-icon="ion-ios-arrow-down" spinner="dots" on-refresh="refresh(false)"></ion-refresher>
+        <ion-spinner ng-if="!dataLoaded" icon="dots" class="load-spinner"></ion-spinner>
+        <message-card ng-repeat="message in messages" ></message-card>
+    </ion-content>
+</ion-view>

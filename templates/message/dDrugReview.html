@@ -1,0 +1,34 @@
+<div>
+    <div class="deliver-time">
+        {{message.deliverTime | deliverTimeFilter}}
+    </div>
+    <div class="card drugreview-card" on-hold="deleteMessage($index)">
+        <div class="row message-header">
+            <div class="icon-med icon-class">
+            </div>
+            <div class="message-title">
+                药物审核
+            </div>
+        </div>
+        <div class="message-content">
+            <div class="row">
+                <div class="drug-name">{{message.drugName}}</div>
+                <div class="drug-value">{{message.drugValue}}</div>
+            </div>
+            <div class="row">
+                <div class="bedno-class">{{message.patBedNo}}床</div>
+                <div class="name-class">{{message.patientName}}</div>
+                <div class="time-class">{{message.reportDateTime}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="unread-class">
+                <div ng-if="message.readTimes==0">新</div>
+            </div>
+            <div class="row message-footer" ng-click="toDrugReviewDetail($index)">
+                <div class="col">查看详情</div>
+            </div>
+        </div>
+    </div>
+</div>
+

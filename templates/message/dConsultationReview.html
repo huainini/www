@@ -1,0 +1,35 @@
+<div>
+    <div class="deliver-time">
+        {{message.deliverTime | deliverTimeFilter}}
+    </div>
+    <div class="card consultationReview-card" on-hold="deleteMessage($index)">
+        <div class="row message-header">
+            <div class="icon-huizhen icon-class">
+            </div>
+            <div class="message-title">
+                会诊审核
+            </div>
+        </div>
+        <div class="message-content">
+            <div class="row">
+                <div class="agree-details">主治医师同意</div>
+            </div>
+            <div class="row">
+                <div class="consultation-name">右侧腹股沟斜疝</div>
+            </div>
+            <div class="row">
+                <div class="bedno-class">1床</div>
+                <div class="name-class">谷增光</div>
+                <div class="time-class">2010-07-06 10:28</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="unread-class">
+                <div ng-if="message.readTimes==0">新</div>
+            </div>
+            <div class="row message-footer" ng-click="toConsultationDetail($index)">
+                <div class="col">查看详情</div>
+            </div>
+        </div>
+    </div>
+</div>

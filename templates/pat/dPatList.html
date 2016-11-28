@@ -1,0 +1,25 @@
+<div class="deptDivide" ng-bind="dept"></div>
+<ion-item ng-repeat="pat in wholePatList | patListFilter:isAttentionList : dept | orderBy: 'bedNo'" ng-click="goPatientItem(pat)"  class="item item-icon-left">
+    <div class="icon" ng-class="{'男':'icon-man red','女':'icon-woman blue'}[pat['sex']]"></div>
+    <div class="patientContent" >
+        <div class="patientName">{{pat['name']}}</div>
+        <div class="patientBed">{{pat['bedNo']}}床</div>
+        <div class="patientClass">{{pat['nurseClassName']}}</div>
+        <div class="patientStatus" ng-class="{'危':'firstClass','重':'secondClass','一般':'thirdClass'}[pat['patientStatusName']]">{{pat['patientStatusName']}}</div>
+    </div>
+    <ion-option-button ng-show="pat['acceptAttention']==-1" class="attentionButtonStyle" ng-click="attention(pat,$index)">
+        关注
+    </ion-option-button>
+    <ion-option-button ng-show="pat['acceptAttention']==0" class="attentionButtonStyle" ng-click="attention(pat,$index)">
+        关注
+    </ion-option-button>
+    <ion-option-button ng-show="pat['acceptAttention']==1" class="notattentionButtonStyle" ng-click="attention(pat,$index)">
+        取消关注
+    </ion-option-button>
+    <ion-option-button  ng-show="pat['acceptCollection']==-1" class="collectFlagClass" ng-click="collect(pat)">
+        收藏
+    </ion-option-button>
+    <ion-option-button  ng-show="pat['acceptCollection']==0" class="collectFlagClass" ng-click="collect(pat)">
+        收藏
+    </ion-option-button>
+</ion-item>

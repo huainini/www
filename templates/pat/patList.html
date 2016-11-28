@@ -1,0 +1,16 @@
+<ion-view view-title="病人" class="patientListView" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon mobileAppBaseBtn" menu-toggle="left">
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-refresher pulling-icon="ion-ios-arrow-down" spinner="dots" on-refresh="refresh(false)"></ion-refresher>
+        <ion-spinner ng-if="!dataLoaded" icon="dots" class="load-spinner"></ion-spinner>
+        <ion-list>
+            <div class="attentionMarskdiv" ng-show="attentionPersonFlag">我关注的病人</div>
+            <pat-list ng-repeat="dept in attentionDeptList" ng-init="isAttentionList=true"></pat-list>
+            <div class="attentionMarskdiv" ng-show="patientListFlag">我的病人</div>
+            <pat-list ng-repeat="dept in deptList" ng-init="isAttentionList=false"></pat-list>
+        </ion-list>
+    </ion-content>
+</ion-view>

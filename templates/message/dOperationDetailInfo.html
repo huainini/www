@@ -1,0 +1,62 @@
+<div class="list list-insert" ng-model="operation">
+    <div class="item item-input">
+        <div class="input-label">手术名称</div>
+        <div class="autoHeight">{{operation.operationName}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">手术时间</div>
+        <div class="autoHeight">{{operation.operationTime|date:'yyyy/MM/dd HH:mm'}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">手术室</div>
+        <div class="autoHeight">{{operation.operationRoomLocation}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">手术台次</div>
+        <div class="autoHeight">{{operation.sequence}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">病人姓名</div>
+        <div class="autoHeight">{{operation.patientName}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">病人性别</div>
+        <div class="autoHeight">{{operation.patientSex}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">病人床号</div>
+        <div class="autoHeight">{{operation.patientBedNo}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">手术医生</div>
+        <div class="autoHeight">{{operation.surgeon}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">第一手术助手</div>
+        <div class="autoHeight">{{operation.firstAssistant}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">第二手术助手</div>
+        <div class="autoHeight">{{operation.secondAssistant}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">第三手术助手</div>
+        <div class="autoHeight">{{operation.thirdAssistant}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">第四手术助手</div>
+        <div class="autoHeight">{{operation.fourthAssistant}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">输血者</div>
+        <div class="autoHeight">{{operation.bloodTranDoctor}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">麻醉医生</div>
+        <div class="autoHeight">{{operation.anesthesiaDoctor}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">麻醉助手</div>
+        <div class="autoHeight">{{operation.anesthesiaAssistant}}</div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="list list-insert dNewSchedule">
+    <div class="item item-input introCls">
+        <div class="input-label">标题</div>
+        <div class="autoHeight">{{event.title}}</div>
+    </div>
+    <div class="item item-input introCls">
+        <div class="input-label">地点</div>
+        <div class="autoHeight">{{event.place}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">时间</div>
+        <div class="autoHeight" ng-if="event.allDay">{{event.startTime|date:'yyyy/MM/dd'}}</div>
+        <div class="autoHeight"  ng-if="!event.allDay">{{event.startTime|date:'yyyy/MM/dd HH:mm'}}</div>
+    </div>
+    <div class="item item-input">
+        <div class="input-label">结束</div>
+        <div class="autoHeight" ng-if="event.allDay">{{event.endTime|date:'yyyy/MM/dd'}}</div>
+        <div class="autoHeight"  ng-if="!event.allDay">{{event.endTime|date:'yyyy/MM/dd HH:mm'}}</div>
+    </div>
+</div>

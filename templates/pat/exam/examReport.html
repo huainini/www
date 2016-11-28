@@ -1,0 +1,46 @@
+<ion-view class="examReport patientinfoView">
+    <header-bar></header-bar>
+    <ion-content >
+        <div class="card cardStyle">
+            <div class="cardLine item">
+                <div class="lineLabel">检查类别</div>
+                <div class="lineValue">{{examReport['examClass']}}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">检查子类</div>
+                <div class="lineValue">{{examReport['examSubClass']}}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">申请医生</div>
+                <div class="lineValue">{{examReport['reqPhysician']}}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">申请日期</div>
+                <div class="lineValue">{{examReport['reqDateTime'] }}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">报告医生</div>
+                <div class="lineValue">{{examReport['reporter']}}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">报告日期</div>
+                <div class="lineValue">{{examReport['examDateTime'] }}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">相关内容</div>
+                <div class="lineValue">{{examReport['examPara']}}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">检查所见</div>
+                <div class="lineValue">{{examReport['description']}}</div>
+            </div>
+            <div class="cardLine item">
+                <div class="lineLabel">印象</div>
+                <div class="lineValue">{{examReport['impression']}}</div>
+            </div>
+        </div>
+        <button class=" button button-block mobileAppBaseButton" ng-show="false"
+                ng-click="queryExamReport(examItem['EXAM_NO'])">查看影像
+        </button>
+    </ion-content>
+</ion-view>

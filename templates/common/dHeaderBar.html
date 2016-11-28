@@ -1,0 +1,23 @@
+<ion-header-bar align-title="center" class="stable mobileAppBaseBtn">
+    <div class="buttons">
+        <button class="button button-clear no-animation mobileAppBaseBtn"
+                ng-click="header.leftClick()" ng-if="header.leftIsText">
+            {{header.leftText}}
+        </button>
+        <button class="button icon-left {{header.leftIcon=='default'?'ion-chevron-left':header.leftIcon}} button-clear mobileAppBaseBtn"
+                ng-click="header.leftClick()"
+                ng-if="header.leftIsIcon">{{header.leftIconText}}
+        </button>
+    </div>
+    <h1 class="title mobileAppBaseBtn">{{header.center}}</h1>
+
+    <div class="buttons">
+        <button class="button button-clear no-animation mobileAppBaseBtn"
+                ng-click="header.rightClick()" ng-if="header.rightIsText">
+            {{header.rightText}}
+        </button>
+        <button class="button icon-right {{header.rightIcon}} button-clear mobileAppBaseBtn"
+                ng-click="header.rightClick()"
+                ng-if="header.rightIsIcon"></button>
+    </div>
+</ion-header-bar>

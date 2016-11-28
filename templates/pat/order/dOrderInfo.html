@@ -1,0 +1,19 @@
+<div class="card cardStyle">
+    <div class="itemTitle row">
+        <div class="icon-order col col-10"></div>
+        <div class="orderClassDiv col col-25">{{order['orderClass']}}</div>
+        <div class="repeatIndicatorDiv col col-33">{{order['repeatIndicator']}}</div>
+        <div class="orderStatusDiv col  ">{{order['orderStatus']}}</div>
+    </div>
+    <div class="orderContentTitle row ">
+        <div class="orderTextList col col-60">
+            <div ng-repeat="orderitem in order.list" class="orderTextDiv ">{{orderitem['orderText']}}&nbsp;&nbsp;&nbsp;{{orderitem['dosage']}}{{orderitem['dosageUnits']}}</div>
+        </div>
+        <div class="orderAdministration col col-27 col-center">{{order['administration']}}</div>
+    </div>
+    <div class="labelTitle row ">
+        <div class="orderClassDiv col col-50">始{{order['startDateTime'] | date:'yyyy-MM-dd HH:mm'}}</div>
+        <div class="orderClassDiv col" ng-if="order['stopDateTime']!=null">至{{order['stopDateTime'] }}</div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<ion-sidebox-view class="ordersearchView"  title="筛选" cancel-fn="cancelFn()" ok-fn="okFn()">
+   <ion-content overflow-scroll="true" style="overflow: hidden" ng-controller="examFilterCtrl">
+            <div class="itemTitle">类别</div>
+            <div class="itemContent">
+                    <div  ng-repeat="examClassItem in ExamItem" class="filterItem" ng-click="queryExamClassText(examClassItem.examClass)"
+                         ng-class="{true:'select',false:'notselect'}[examClassFlag[examClassItem.examClass]]"
+                         ng-bind=examClassItem.examClass></div>
+        </div>
+            <div class="itemTitle">子类</div>
+            <div class="itemContent ">
+                    <div ng-repeat="examSubClassItem in ExamSubClass " class="filterItem" ng-click="queryExamSubClassText(examSubClassItem)"
+                         ng-class="{true:'select',false:'notselect'}[examSubClassFlag[examSubClassItem]]"
+                         ng-bind="examSubClassItem"></div>
+        </div>
+            <div class="itemTitle">状态</div>
+            <div class="itemContent ">
+                    <div ng-repeat="resultStatusItem in ResultStatus" class="filterItem" ng-click="queryExamStatusText(resultStatusItem)"
+                         ng-class="{true:'select',false:'notselect'}[examStatusFlag[resultStatusItem]]"
+                         ng-bind="resultStatusItem"></div>
+        </div>
+    </ion-content>
+</ion-sidebox-view>

@@ -1,0 +1,17 @@
+  <ion-sidebox-view class="patSearchView"  title="病人选择" cancel-fn="closeModal(false)" ok-fn="closeModal(true)" ok-disabled="paraIndex==undefined">
+
+    <!--&lt;!&ndash;<header-bar></header-bar>&ndash;&gt;-->
+    <!--<ion-header-bar class="bar bar-header pat-search-bar">-->
+        <!--<div align="left" class="button button-clear button-primary button-left" ng-click="closeModal(false)">取消</div>-->
+        <!--<div align="center" class="button button-clear modal-title" >病人选择</div>-->
+        <!--<div align="right" class="button button-clear button-primary button-right" ng-click="closeModal(true)">确定</div>-->
+    <!--</ion-header-bar>-->
+    <ion-content>
+        <ion-list class="list-item-cls">
+            <ion-radio class="itemCls" ng-repeat="item in patList"
+                       ng-click="toRemember($index)">
+                <span style="float: left">{{item.name}}</span>
+            </ion-radio>
+        </ion-list>
+    </ion-content>
+</ion-sidebox-view>

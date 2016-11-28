@@ -1,0 +1,11 @@
+<ion-view class="imageView">
+    <header-bar></header-bar>
+    <ion-content>
+        <div class="imageTitle">经典头像</div>
+        <div class="imageContent">
+            <div ng-repeat="image in images" ng-class="{true:'select',false:'unselect'}[imageClass[image]]">
+                <img ng-src="images/{{image}}" ng-click="select(image)">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

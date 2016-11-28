@@ -1,0 +1,40 @@
+<div>
+    <div class="blockCardClass">
+    <div class="titleCls row">
+        <div class="col-75">
+        <div class="{{iconCls}} col-33"></div>
+        <div class="textCls col-33">{{titleData.itemName}}</div>
+        <div class="textCls unitCls col-33">({{titleData.itemUnit}})</div>
+        </div>
+        <div class="col-25">
+        <div class="icon-edit col-15" id="editId" ng-show="editOrCompleted" ng-click="edit(type)"></div>
+        <div class="completeCls col-15" id="completeId" ng-show="!editOrCompleted" ng-click="completed(type,titleData.itemCode,titleData.itemName,titleData.itemUnit)">完成</div>
+        </div>
+        </div>
+    <highchart config="chartConfig" class="span9 chartCls"></highchart>
+</div>
+    <div class="changeValueCls" id="changeRangeId" ng-if="!editOrCompleted">
+    <div class="modifyCardClass">
+        <div class="limitDivCls">
+            <div class="nameDivCls">
+                <div class="textCls">{{variableChange.topValue}}(b/min)</div>
+            </div>
+            <div class="valueDivCls">
+                <div class="item range range-assertive">
+                    <input id="myRange" type="range" min="0" max="100" name="maxValue" ng-model="variableChange.topValue">
+                </div>
+            </div>
+        </div>
+        <div class="limitDivCls">
+            <div class="nameDivCls">
+                <div class="textCls">{{variableChange.minValue}}(b/min)</div>
+            </div>
+            <div class="valueDivCls">
+                <div class="item range range-balanced">
+                    <input type="range" min="0" max="100" name="minValue" ng-model="variableChange.minValue">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,13 @@
+<ion-view  class="orderView">
+    <ion-content>
+        <ion-refresher pulling-icon="ion-ios-arrow-down" spinner="dots" on-refresh="refresh(false)"></ion-refresher>
+        <ion-spinner ng-if="!dataLoaded" icon="dots" class="load-spinner"></ion-spinner>
+        <order-info ng-repeat="order in orderInfo track by $index"></order-info>
+        <ion-infinite-scroll
+                ng-if="isMore"
+                on-infinite="loadMore()"
+                distance="1%"
+                spinner="dots">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

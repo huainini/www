@@ -1,0 +1,12 @@
+<ion-item  ng-click="goPatientItem(pat)"  class="item item-icon-left">
+    <div class="icon" ng-class="{'男':'icon-man red','女':'icon-woman blue'}[pat['sex']]"></div>
+    <div class="patientContent">
+        <div class="patientName">{{pat['name']}}</div>
+        <!--<div class="patientBed">{{pat['bedNo']}}床</div>-->
+        <!--<div class="patientClass">{{pat['nurseClassName']}}</div>-->
+        <!--<div class="patientStatus" ng-class="{'危':'firstClass','重':'secondClass','一般':'thirdClass'}[pat['patientStatusName']]">{{pat['patientStatusName']}}</div>-->
+    </div>
+    <ion-option-button class="button-positive"style="background-color: aquamarine" ng-click="cancelCollect(pat)">
+        取消收藏
+    </ion-option-button>
+</ion-item>

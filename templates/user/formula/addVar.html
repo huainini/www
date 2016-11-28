@@ -1,0 +1,20 @@
+<ion-view class="addVarView" xmlns="http://www.w3.org/1999/html">
+    <header-bar></header-bar>
+    <ion-content ng-model="obj">
+        <div class="formulaShow">
+            <textarea rows="3" readonly="true" class="textAreaStyle">{{obj.formulaTextShow}}</textarea>
+        </div>
+        <div class="list">
+            <label class="item item-input" ng-repeat="item in obj.varList">
+                <span class="input-label">{{item.name}}</span>
+                <input type="text" placeholder="变量名称最多不超过8个字" ng-model="item.value">
+            </label>
+        </div>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">公式名</span>
+                <input type="text" placeholder="公式名最多不超过8个字" ng-model="obj.formulaName">
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

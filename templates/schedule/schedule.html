@@ -1,0 +1,36 @@
+<ion-view view-title="日程" class="calendarMainView">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon mobileAppBaseBtn" menu-toggle="left">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon ion-plus mobileAppBaseBtn"
+                ng-click="newSchedule()">
+        </button>
+    </ion-nav-buttons>
+    <div class="well well-sm">
+        <calendar ng-model="currentDate" calendar-mode="mode" event-source="eventSource"
+                  event-selected="onEventSelected(event)"
+                  format-month-title="yyyy-MM"
+                  format-week-title="yyyy-MM"
+                  format-day-title="yyyy-MM-dd" ></calendar>
+    </div>
+    <div class="button-bar">
+        <button type="button" class="button mobileAppBaseBtn" ng-class="{actived:mode==='month'}"
+                ng-click="changeMode('month')">
+            月
+        </button>
+        <button type="button" class="button mobileAppBaseBtn" ng-class="{actived:mode==='week'}"
+                ng-click="changeMode('week')">
+            周
+        </button>
+        <button type="button" class="button mobileAppBaseBtn" ng-class="{actived:mode==='day'}"
+                ng-click="changeMode('day')">
+            日
+        </button>
+        <button type="button" class="button mobileAppBaseBtn" ng-disabled="isToday()"
+                ng-click="today()">
+            今
+        </button>
+    </div>
+</ion-view>

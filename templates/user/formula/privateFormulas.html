@@ -1,0 +1,25 @@
+<ion-view class="privateFormulaView">
+    <ion-content>
+        <ion-refresher pulling-icon="ion-ios-arrow-down" spinner="dots" on-refresh="refresh()"></ion-refresher>
+        <ion-spinner ng-if="!dataLoaded" icon="dots" class="load-spinner"></ion-spinner>
+        <div class="cardStyle">
+            <ion-list>
+                <ion-item class="itemCls" ng-repeat="item in myFormulaList"
+                          ng-value="item.formulaName"
+                          ng-model="item.formulaName"
+                          ng-click="toMyDetail($index)">
+                    {{ item.formulaName}}
+                    <ion-option-button class="button-assertive"
+                                       ng-click="doDelete(item)">
+                        删除
+                    </ion-option-button>
+                    <ion-option-button class="button-calm"
+                                       ng-click="doEdit(item)">
+                        编辑
+                    </ion-option-button>
+                     <span class="button button-icon icon-arrow buttonCls"></span>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>
